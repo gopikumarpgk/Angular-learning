@@ -1,0 +1,42 @@
+<div class="container">
+    <table mat-table [dataSource]="userList" matSort class="mat-elevation-z8 demo-table">
+
+        <tr mat-header-row *matHeaderRowDef="headerList"></tr>
+
+        <tr mat-row *matRowDef="let row; columns: headerList;"></tr>
+
+        <ng-container *ngFor="let header of headerList" matColumnDef="{{header}}">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>{{header | titlecase}}</th>
+            <td mat-cell *matCellDef="let row">{{row[header]}}</td>
+        </ng-container>
+    </table>
+    <mat-paginator 
+    [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
+</div>
+
+<!-- <table mat-table [dataSource]="userList" class="mat-elevation-z8">
+   
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let user"> {{user.firstName}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table> -->

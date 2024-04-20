@@ -1,0 +1,29 @@
+
+<div class="row">
+    <div class="col-6">
+ <button (click)="showData('button click event')" >click me</button><br><br>
+
+<input type="text" #box1 placeholder="upkey" (keyup)="showData(box1.value)"><br><br>
+
+<input type="text" #box2 placeholder="downkey"  (keydown)="showData(box2.value)"><br><br>
+
+<input type="text" #box3 placeholder="presskey" (keypress)="showData(box3.value)"><br><br>
+    </div>
+
+    <div class="col-6 text-align-center">
+        <h4>{{box1.value}}<br><br>
+            {{box2.value}}<br><br>
+            {{box3.value}}
+        </h4>
+    </div>
+
+</div>
+
+<!-- <div  *ngFor="let data of subjectChild">
+    <h5 class=card-title>
+           BookName : {{data.bookname}} 
+    </h5> 
+    <h5 class="card-body"></h5>
+    author : {{data.author}}<br>
+           category : {{data.category}} <br><br>
+</div> -->

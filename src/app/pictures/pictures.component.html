@@ -1,0 +1,18 @@
+<!-- <p>pictures works!</p>
+<input type="text" [(ngModel)]="obj.title" >
+<button class="btn-sm btn-primary" (click)="putPicture()">update</button>
+{{data.title}} -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-1" *ngFor="let pic of allPictures">
+            <div class="card text-center">
+                <div class="card-body">{{pic.id}}
+                    <img [src]="pic.thumbnailUrl" alt="" class="picwid">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

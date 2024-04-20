@@ -1,0 +1,54 @@
+<div class="container">
+
+   <div class="card">
+        <div class="card-body">
+            <button class="btn btn-success" (click)="generateNumber()">genarate</button>
+            <br><br> counter = {{_number.counter}}
+            <br><br>
+            <button class="btn btn-success" (click)="number()">increase</button>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-3 " *ngFor="let data of subjectChild"> <br>
+            <div class="card ">
+                <div class="card-header text-center"> <h4>BooK</h4></div>
+                <div class="card-body ">
+                    <ng-container>
+                        <form [formGroup]="myForm">
+
+                            <div class="form-group">
+                                <label for="id">ID:</label> <br>
+                                <input class="form-control text-center" type="text" id="id" name="id"
+                                    value="{{data.bookid}}" formControlName="id">
+                            </div>
+
+                            <div classs="form-group">
+                                <label for="name">Name:</label><br>
+                                <input class="form-control text-center" type="text" id="name" name="name"
+                                    value="{{data.bookname}}" formControlName="name">
+                            </div>
+
+                            <div classs="form-group">
+                                <label for="author">author:</label><br>
+                                <input class="form-control text-center" type="text" id="author name=" author
+                                    value="{{data.author}}" formControlName="author">
+                            </div>
+
+                            <div classs="form-group">
+                                <label for="category">category:</label><br>
+                                <input class="form-control text-center" type="text" id="category" name="category"
+                                    value="{{data.category}}" formControlName="category">
+                            </div>
+                        </form>
+                    </ng-container>
+                </div>
+                <div class="text-endz p-2"><button class="btn btn-warning">Add</button>
+                </div></div>
+        </div>
+    </div>
+    <button class="btn btn-success" (click)="submit()">submit</button>
+
+
+</div>

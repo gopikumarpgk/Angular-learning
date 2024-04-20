@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let userDetail of allUserDetails.users"> <br>
+            <div class="card ">
+                <div class="card-header  text-center">
+                    <h3><img [src]="userDetail.image" alt="" style="width:145px">
+                        UserDetails</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6 ">
+                            <div class="row text-center" style="text-align-last:end">
+                                <h6>FirstName : <br></h6>
+                            </div>
+                            <div class="row text-center" style="text-align-last:end">
+                                <h6>lastName : <br></h6>
+                            </div>
+                            <div class="row text-center" style="text-align-last:end">
+                                <h6>birthDate : <br></h6>
+                            </div>
+                            <div class="row text-center" style="text-align-last:end">
+                                <h6>gender : <br></h6>
+                            </div>
+                            <div class="row text-center" style="text-align-last:end">
+                                <h6> PhNo : <br></h6>
+                            </div>
+                            <div class="row text-center" style="text-align-last:end">
+                                <h6>university : <br></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 ">
+                            <div class="row text-left">
+                                <h6> {{userDetail.firstName}} <br></h6>
+                            </div>
+                            <div class="row text-left">
+                                <h6>{{userDetail.lastName}} <br></h6>  
+                            </div>
+                            <div class="row text-left">
+                                <h6>{{userDetail.birthDate}} <br></h6>
+                            </div>
+                            <div class="row text-left">
+                                <h6>{{userDetail.gender}} <br></h6>
+                            </div>
+                            <div class="row text-left">
+                                <h6>{{userDetail.phone}} <br></h6>
+                            </div>
+                            <div class="row text-left">
+                                <h6>{{userDetail.university}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-test [subjectchild]="allUserDetails"></app-test>

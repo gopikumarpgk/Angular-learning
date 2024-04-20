@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let onePhone of smartPhoneDetails.products"> <br>
+            <div class="card text-right">
+                <div class="card-header text-center">
+                    <img [src]="onePhone.thumbnail" alt="..." class="imgwid">
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row" style="text-align-last:end"> <h6>ID :</h6> </div>
+                            <div class="row" style="text-align-last:end"> <h6>Brand :</h6> </div>
+                            <div class="row" style="text-align-last:end"> <h6>Name :</h6> </div>
+                            <div class="row" style="text-align-last:end"> <h6>Category :</h6> </div>
+                            <div class="row" style="text-align-last:end"> <h6>Price :</h6> </div>
+                            <div class="row" style="text-align-last:end"> <h6>Description :</h6> </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="row"> <h6>{{onePhone.id}} <br></h6> </div>
+                            <div class="row"> <h6>{{onePhone.brand}} <br></h6> </div>
+                            <div class="row"> <h6>{{onePhone.title}} <br></h6> </div>
+                            <div class="row"> <h6>{{onePhone.category}} <br></h6> </div>
+                            <div class="row"> <h6>${{onePhone.price}} <br></h6> </div>
+                            <div class="row"> <h6>{{onePhone.description}} <br></h6> </div>
+                        </div>
+                    </div>
+                    <div class="btn btn-success"(click)="putPhoneDetails(onePhone)">update</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

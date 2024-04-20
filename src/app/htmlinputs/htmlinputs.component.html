@@ -1,0 +1,64 @@
+<div class="container my-4">
+    <div class="row">
+        <div class="col-6">
+            <div>
+                yourname:<input type="text" class="form-control twidth" [(ngModel)]="name">
+            </div>
+            <div>
+                age:<input type="text" class="form-control twidth" [(ngModel)]="age">
+            </div>
+            <div>
+                qualification:<input type="text" class="form-control twidth" [(ngModel)]="qualification">
+            </div>
+            <div >
+                <div class="form-check"> 
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio"  name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        female
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio"  name="flexRadioDefault" id="flexRadioDefault3" checked>
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        transgender
+                    </label>
+                </div>
+            </div>
+            <div>
+               Email:<input type="email" class="form-control twidth" [(ngModel)]="email">
+            </div>
+           <div>
+            Search<input type="search"  class="form-control twidth" (keyup)="searchh(inputsearch.value)" [value]="search" #inputsearch >
+                <button (click)="searchh(inputsearch.value)"> search</button>
+           </div> 
+           <br>
+            <div>
+                Image: <input type="file" name=""accept="image/*" (change)="imgFileSelected($event)">
+                <br>
+                <br>
+                <button (click)="submit(image)" class="btn- btn-primary"> Submit</button>
+            </div>
+     
+              
+
+        </div>
+        <div class="col-6"> 
+            <h4>
+                Name:  {{name}}<br><br>
+           Age: {{age}}<br><br>
+           Qualification: {{qualification}}<br><br>
+            gender: <br><br>
+           Email: {{email}}<br><br>
+           Search: {{search}} <br>
+           <img [src]="transform(imgSrc)"> 
+            </h4>
+        </div>
+
+    </div>
+</div>

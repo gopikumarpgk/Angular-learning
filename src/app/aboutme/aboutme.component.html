@@ -1,0 +1,26 @@
+<div class=" justify-content-center">
+
+    <h1>about Me</h1>
+
+</div>
+
+<!-- <div *ngFor="let onebook of books; let i=index">
+
+       
+{{i}} {{onebook.bookname}}
+</div> -->
+
+<!-- <div *ngFor="let data of car.obj.owners">
+    <div *ngIf="data.age>21" (click)="gopi(data)">
+        {{data.age}}
+    </div>
+    <div (click)="gopi(data)">{{data.name}}</div>
+</div> -->
+
+<div *ngFor="let onebook of books">
+    <div *ngIf="onebook.bookid>=105">
+         {{onebook.bookid}} 
+        {{onebook.bookname}}
+    </div>
+   
+</div> 

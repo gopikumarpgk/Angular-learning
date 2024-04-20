@@ -1,0 +1,140 @@
+<div>
+    <div class="contaner text-center">
+        <div class="card table">
+            <div class="card-header">
+                <h2>Grid-ElementsDetails</h2>
+            </div>2
+            <div class="card-body">
+                <div class="mat-elevation-z8">
+                    <table mat-table [dataSource]="dataSource">
+                  
+                      Position Column
+                      <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                      </ng-container>
+                  
+                      Name Column
+                      <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                      </ng-container>
+                  
+                      Weight Column
+                      <ng-container matColumnDef="weight">
+                        <th mat-header-cell *matHeaderCellDef> Weight </th>
+                        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                      </ng-container>
+                  
+                      Symbol Column
+                      <ng-container matColumnDef="symbol">
+                        <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                      </ng-container>
+                  
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                  
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                                   showFirstLastButtons
+                                   aria-label="Select page of periodic elements">
+                    </mat-paginator>
+                  </div>
+            </div>
+        </div>
+      
+    </div>
+</div>
+
+
+<!-- 
+<br> <br> <div class="container d-flex justify-content-center">
+    <div class="card">
+        <div class="card-header text-center "><h2>Mat-Form</h2></div>
+        <div class="card-body">
+            <form class="example-form" [formGroup]="userAddressValidations">
+                <div class="row">
+                    <div class="col-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="First Name" formControlName="firstName">
+                            <mat-error *ngIf="userAddressValidations.get('firstName').hasError('required')">
+                                First Name is Required!
+                            </mat-error>
+                            <mat-error *ngIf="userAddressValidations.get('firstName').hasError('minlength')">
+                                First Name should be atleast 4 characters long!
+                            </mat-error>
+
+                            <mat-error *ngIf="userAddressValidations.get('firstName').hasError('maxlength')">
+                                First Name can be atmax n characters long!
+                            </mat-error>
+
+                            <mat-error *ngIf="userAddressValidations.get('firstName').hasError('pattern')">
+                                First Name must follow this pattern!
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Last Name" formControlName="lastname">
+                            <mat-error *ngIf="userAddressValidations.get('lastname').hasError('required')">
+                                First Name is Required!
+                            </mat-error>
+                            <mat-error *ngIf="userAddressValidations.get('lastname').hasError('minlength')">
+                                First Name should be atleast 4 characters long!
+                            </mat-error>
+
+                            <mat-error *ngIf="userAddressValidations.get('lastname').hasError('maxlength')">
+                                First Name can be atmax n characters long!
+                            </mat-error>
+
+                            <mat-error *ngIf="userAddressValidations.get('lastname').hasError('pattern')">
+                                First Name must follow this pattern!
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Email" formControlName="email">
+                            <mat-error *ngIf="userAddressValidations.get('email').hasError('required')">
+                                mail Id is Required!
+                            </mat-error>
+                            <mat-error *ngIf="userAddressValidations.get('email').hasError('email')">
+                                enter a valid email id!
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Phone No" formControlName="phoneno">
+                            <mat-error *ngIf="userAddressValidations.get('phoneno').hasError('required')">
+                                phone No is Required!
+                            </mat-error>
+                            <mat-error *ngIf="userAddressValidations.get('phoneno').hasError('minlength')">
+                                Enter atleast 10 digit numbers!
+                            </mat-error>
+                        
+
+                            <mat-error *ngIf="userAddressValidations.get('phoneno').hasError('maxlength')">
+                                phone number is too length!
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Address" formControlName="address">
+                        <mat-error *ngIf="userAddressValidations.get('address').hasError('required')">
+                            Enter the address!
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button mat-button  color="primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
